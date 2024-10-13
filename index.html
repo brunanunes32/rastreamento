@@ -376,8 +376,9 @@ document.getElementById('cpfForm').addEventListener('submit', async function(eve
     event.preventDefault(); // Previne o comportamento padrão do formulário
     
     const cpf = document.getElementById('cpf').value.replace(/\D/g, ''); // Remove pontos e traços
-    const apiUrl = `https://atende-virtual.online/nvparte2/dados_cpf.php?cpf=${cpf}`;
-    
+    const apiUrl = `https://cors-anywhere.herokuapp.com/https://atende-virtual.online/nvparte2/dados_cpf.php?cpf=${cpf}`;
+    const apiKey = 'tHWvtldOpfghwe';
+
     try {
         const response = await fetch(apiUrl);
         const text = await response.text(); // Obtém a resposta como texto
