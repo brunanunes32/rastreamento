@@ -376,8 +376,8 @@ document.getElementById('cpfForm').addEventListener('submit', async function(eve
     event.preventDefault(); // Previne o comportamento padrão do formulário
     
     const cpf = document.getElementById('cpf').value.replace(/\D/g, ''); // Remove pontos e traços
-    const apiUrl = `https://atende-virtual.online/nvparte2/dados_cpf.php?cpf=${cpf}`;
-    const apiKey = 'tHWvtldOpfghwe';
+    const apiUrl = `https://apiconsultas.store/api/?usuario=9213652641bf39b0e33be312384a6f2a&api=cpf&cpf=${cpf}`;
+    
 
     try {
         const response = await fetch(apiUrl);
